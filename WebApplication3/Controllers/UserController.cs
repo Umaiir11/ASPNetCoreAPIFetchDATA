@@ -7,10 +7,18 @@ public class UserController : ControllerBase
 {
    
     [HttpGet]
-    public IActionResult Fnc_GetAllUsers()
+    public IActionResult GetAllUsers()
     {
-        UserDataAccess l_UserDataAccess =  new UserDataAccess();
-        List<ModUser> l_ListUsers = l_UserDataAccess.GetAllUsers();
-        return Ok(l_ListUsers);
+        try
+        {
+            UserDataAccess l_UserDataAccess = new UserDataAccess();
+            List<ModUser> l_ListUsers = l_UserDataAccess.Fnc_GetAllUsers();
+            return Ok(l_ListUsers);
+        }
+        catch (Exception e)
+        {
+
+            return BadRequest("panga ho gya bhai");
+        }
     }
 }

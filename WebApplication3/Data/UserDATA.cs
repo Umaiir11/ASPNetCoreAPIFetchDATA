@@ -8,7 +8,7 @@ using WebApplication3.Model;
 
 public class UserDataAccess
 {
-    public List<ModUser> GetAllUsers()
+    public List<ModUser> Fnc_GetAllUsers()
     {
         List<ModUser> users = new List<ModUser>();
 
@@ -19,7 +19,7 @@ public class UserDataAccess
         {
             connection.Open();
 
-            string sql = "SELECT * FROM User";
+            string sql = "SELECT * FROM Users";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
