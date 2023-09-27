@@ -1,4 +1,4 @@
-﻿namespace DAL
+﻿namespace WebApplication3.Model
 {
     public class ModUser
     {

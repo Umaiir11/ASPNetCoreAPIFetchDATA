@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using DAL;
 using Microsoft.Extensions.Configuration;
 using WebApplication3.ConnectionString;
+using WebApplication3.Model;
 
 public class UserDataAccess
 {
@@ -19,7 +19,7 @@ public class UserDataAccess
         {
             connection.Open();
 
-            string sql = "SELECT * FROM Users";
+            string sql = "SELECT * FROM User";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
