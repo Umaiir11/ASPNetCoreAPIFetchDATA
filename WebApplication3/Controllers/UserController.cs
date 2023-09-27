@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-[Route("api/[controller]")]
+[Route("api/[User]")]
 [ApiController]
 public class UserController : ControllerBase
 {
